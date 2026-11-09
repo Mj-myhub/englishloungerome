@@ -1878,7 +1878,8 @@ if (gm) {
 }
 // Number count-up animation
 function animateNumber(el, target, suffix) {
-    var duration = 2000;
+    // Small numbers (like 2) count up faster, so they do not sit on the last step
+    var duration = target <= 20 ? 1000 : 2000;
     var start = 0;
     var startTime = null;
     function step(timestamp) {
@@ -1886,7 +1887,7 @@ function animateNumber(el, target, suffix) {
         var progress = Math.min((timestamp - startTime) / duration, 1);
         // Ease out cubic
         var eased = 1 - Math.pow(1 - progress, 3);
-        var current = Math.floor(start + (target - start) * eased);
+        var current = Math.round(start + (target - start) * eased);
         el.textContent = current + (suffix || '');
         if (progress < 1) requestAnimationFrame(step);
     }
