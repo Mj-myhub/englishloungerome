@@ -31,6 +31,7 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 - `fonts.css` + `fonts/` — self-hosted web fonts (no Google Fonts requests). `canada-flag.svg` is local too.
 - `logo.png` is the full-size logo (schema); `logo-small.png` (120x144, about 11 KB) is used in the navbar and privacy page. `og-image.jpg` (1200x630) is the social share image.
 - `robots.txt` points to the sitemap.
+- `llms.txt` is a plain-text summary of the business for AI assistants (ChatGPT, Claude, Perplexity). Keep it in sync with `index.html` when services or contact details change.
 - Both pages carry a Content-Security-Policy meta tag; a new external script, image host or form endpoint must be added to it.
 - `sitemap.xml` — add every new page here.
 
@@ -38,6 +39,7 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 
 - Teacher's public name on the site is **Jasper**.
 - Prices are private: the pricing section was removed from `index.html` in Nov 2026 (it is still in the old private repository's history). Never put prices on the site or in this repository unless the owner asks. All CTAs point to the free-trial booking.
+  The owner chose (Nov 2026) to show "affordable rates" wording without numbers: the hero line, the "How much do lessons cost?" FAQ, schema `priceRange` and `llms.txt`.
 - Google reviews: "Leave a Review" uses https://g.page/r/Ce1ph0kn_jyYEBI/review and "See Google Reviews" uses https://g.page/r/Ce1ph0kn_jyYEBI. The six testimonials are from real students.
 - Level test questions must have exactly one correct answer; check new ones carefully.
 
