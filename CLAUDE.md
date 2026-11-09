@@ -68,6 +68,7 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
   no TOEFL (only IELTS/Cambridge); no "materials included" or "score improvement guarantee";
   avoid stock photos (three Unsplash service photos remain until the owner sends real ones).
 - Every visible text needs both `data-en` and `data-it` versions.
+- Italian copy: say "Business English" (not "Inglese Commerciale"); Italian tagline is "L'Inglese in Tutta Comodità" (short enough for one line in the mobile navbar). Keep Italian texts as complete as the English ones.
 
 ## Working with the owner
 
