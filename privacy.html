@@ -16,7 +16,7 @@
   .wrap{max-width:760px;margin:0 auto;padding:2rem 1.2rem 3rem}
   header{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
   header a.home{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--forest-deep);font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:1.1rem}
-  header img{width:42px;height:42px;border-radius:8px}
+  header img{width:35px;height:42px;border-radius:8px}
   .lang button{border:1.5px solid var(--forest);background:none;color:var(--forest);padding:.2rem .55rem;border-radius:4px;font-weight:700;cursor:pointer}
   .lang button.on{background:var(--forest);color:#fff}
   h1{font-family:'Fraunces',Georgia,serif;color:var(--forest-deep);font-size:2rem;margin-bottom:.3rem}
@@ -32,20 +32,20 @@
 <body>
 <div class="wrap">
 <header>
-  <a class="home" href="index.html"><img src="logo.png" alt="">The English Lounge</a>
+  <a class="home" href="index.html"><img src="logo-small.png" alt="" width="35" height="42">The English Lounge</a>
   <div class="lang"><button id="bEn" class="on" onclick="setL('en')">EN</button> <button id="bIt" onclick="setL('it')">IT</button></div>
 </header>
 
 <section lang="en">
   <h1>Privacy notice</h1>
-  <p class="muted">Last updated: 3 November 2026</p>
+  <p class="muted">Last updated: 9 November 2026</p>
 
   <h2>Who is responsible for your data</h2>
   <p>The English Lounge (Jasper), private English teacher in Rome, Italy. Contact: <a href="mailto:theenglishlounge.rome@gmail.com">theenglishlounge.rome@gmail.com</a>.</p>
 
   <h2>What we collect and why</h2>
   <ul>
-    <li><b>Level test:</b> if you submit the level test, we receive your name, email, optional phone number, your answers and your result. We use them to send you your result, contact you about lessons and, if you agreed, send occasional learning tips.</li>
+    <li><b>Level test:</b> if you submit the level test, we receive your name, email, optional phone number, your answers and your result. We use them to send you your result, contact you about lessons and, only if you tick the separate optional box, send occasional learning tips.</li>
     <li><b>Booking a lesson:</b> when you book through Cal.com, we receive the details you enter there (name, email, chosen time) to organise the lesson.</li>
     <li><b>Email and WhatsApp:</b> if you write to us, we use your message and contact details to reply.</li>
   </ul>
@@ -75,14 +75,14 @@
 
 <section lang="it">
   <h1>Informativa privacy</h1>
-  <p class="muted">Ultimo aggiornamento: 3 novembre 2026</p>
+  <p class="muted">Ultimo aggiornamento: 9 novembre 2026</p>
 
   <h2>Titolare del trattamento</h2>
   <p>The English Lounge (Jasper), insegnante privato di inglese a Roma. Contatto: <a href="mailto:theenglishlounge.rome@gmail.com">theenglishlounge.rome@gmail.com</a>.</p>
 
   <h2>Quali dati raccogliamo e perché</h2>
   <ul>
-    <li><b>Test di livello:</b> se invii il test, riceviamo nome, email, telefono (facoltativo), le tue risposte e il risultato. Li usiamo per inviarti il risultato, contattarti per le lezioni e, se hai acconsentito, inviarti consigli occasionali.</li>
+    <li><b>Test di livello:</b> se invii il test, riceviamo nome, email, telefono (facoltativo), le tue risposte e il risultato. Li usiamo per inviarti il risultato, contattarti per le lezioni e, solo se spunti la casella facoltativa separata, inviarti consigli occasionali.</li>
     <li><b>Prenotazione di una lezione:</b> quando prenoti tramite Cal.com riceviamo i dati che inserisci (nome, email, orario scelto) per organizzare la lezione.</li>
     <li><b>Email e WhatsApp:</b> se ci scrivi, usiamo il messaggio e i tuoi contatti per risponderti.</li>
   </ul>
@@ -112,7 +112,7 @@
 </div>
 <script>
 function setL(l){document.body.classList.toggle('it',l==='it');document.getElementById('bEn').classList.toggle('on',l!=='it');document.getElementById('bIt').classList.toggle('on',l==='it');try{localStorage.setItem('lang',l);}catch(e){}}
-try{if(localStorage.getItem('lang')==='it')setL('it');}catch(e){}
+(function(){var l=null;try{l=localStorage.getItem('lang');}catch(e){}if(!l){l=((navigator.language||'')+'').toLowerCase().indexOf('it')===0?'it':'en';}if(l==='it')setL('it');})();
 </script>
 </body>
 </html>

@@ -29,13 +29,17 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 - IELTS practice pages were removed (Nov 2026); their source is only in the old private repository.
 - `privacy.html` — bilingual privacy notice (noindex, so not in the sitemap). Update it if a new third-party service is added.
 - `fonts.css` + `fonts/` — self-hosted web fonts (no Google Fonts requests). `canada-flag.svg` is local too.
+- `logo.png` is the full-size logo (schema); `logo-small.png` (120x144, about 11 KB) is used in the navbar and privacy page. `og-image.jpg` (1200x630) is the social share image.
+- `robots.txt` points to the sitemap.
 - Both pages carry a Content-Security-Policy meta tag; a new external script, image host or form endpoint must be added to it.
 - `sitemap.xml` — add every new page here.
 
 ## Content notes
 
 - Teacher's public name on the site is **Jasper**.
-- Prices are hidden: the `#pricing` section stays in `index.html` with `hidden` so it can be restored; all CTAs point to the free-trial booking.
+- Prices are private: the pricing section was removed from `index.html` in Nov 2026 (it is still in the old private repository's history). Never put prices on the site or in this repository unless the owner asks. All CTAs point to the free-trial booking.
+- Google reviews: "Leave a Review" uses https://g.page/r/Ce1ph0kn_jyYEBI/review and "See Google Reviews" uses https://g.page/r/Ce1ph0kn_jyYEBI. The six testimonials are from real students.
+- Level test questions must have exactly one correct answer; check new ones carefully.
 
 ## Privacy
 
@@ -50,6 +54,8 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 - Bookings: Cal.com user `the.englishlounge`; every "Book Now" CTA points to `/free-trial`.
 - Level test leads are emailed to the business inbox by Web3Forms (key in `index.html`, public by design).
   The result screen promises that Jasper will email the report, so the owner sends it manually.
+  If Web3Forms does not confirm delivery, the student is shown a ready-made WhatsApp/email message instead.
+  Marketing tips have their own optional, unticked checkbox (`learning_tips` field in the email).
 
 ## Design and copy rules
 
@@ -70,5 +76,4 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 ## Open items
 
 - Restrict the Web3Forms key to englishloungerome.com (owner, in the Web3Forms dashboard).
-- `text.txt` contains robots.txt directives; it should be renamed to `robots.txt`.
 - Replace the three Unsplash service photos with the owner's own photos.
