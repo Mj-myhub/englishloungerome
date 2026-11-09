@@ -40,3 +40,35 @@ Owner edits files on mobile via the GitHub app, so keep files small and root-lev
 ## Privacy
 
 - Never commit personal data (codice fiscale, birth date, personal phone, private emails). Business contact details on the site are fine.
+
+## Business (all of this is already public on the site)
+
+- The English Lounge, Rome. Tagline "Learn English in Comfort".
+- Teacher's public name: Jasper. Native Canadian, 12+ years teaching, M.A. Linguistics (Siena), TTC/TEFL.
+- Lessons: General, Business, IELTS/Cambridge prep; in person in Rome and online; free 20-minute trial.
+- Contact on the site: theenglishlounge.rome@gmail.com, WhatsApp +39 352 080 9945 (business number, keep it).
+- Bookings: Cal.com user `the.englishlounge`; every "Book Now" CTA points to `/free-trial`.
+- Level test leads are emailed to the business inbox by Web3Forms (key in `index.html`, public by design).
+  The result screen promises that Jasper will email the report, so the owner sends it manually.
+
+## Design and copy rules
+
+- Colours: emerald #15604A, deep #0B3026, sand gold #CBA15B, clay #C2683F, porcelain background #F7F8F8.
+- Fonts: Fraunces (headings), Plus Jakarta Sans (body), Cormorant Garamond (accents), all self-hosted.
+- Pill-shaped buttons; logo uses border-radius 8px.
+- Site copy: no em dashes; testimonials without quotation marks, apostrophes or real surnames;
+  no TOEFL (only IELTS/Cambridge); no "materials included" or "score improvement guarantee";
+  avoid stock photos (three Unsplash service photos remain until the owner sends real ones).
+- Every visible text needs both `data-en` and `data-it` versions.
+
+## Working with the owner
+
+- Works only on iPhone: give step-by-step mobile instructions, never terminal commands.
+- Wants the highest quality and everything double-checked before pushing.
+- Changes go live only after the PR is merged into `main` (GitHub Pages builds in about 2 minutes).
+
+## Open items
+
+- Restrict the Web3Forms key to englishloungerome.com (owner, in the Web3Forms dashboard).
+- `text.txt` contains robots.txt directives; it should be renamed to `robots.txt`.
+- Replace the three Unsplash service photos with the owner's own photos.
